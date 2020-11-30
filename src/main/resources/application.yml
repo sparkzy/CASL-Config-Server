@@ -1,6 +1,18 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
 spring:
   cloud:
     config:
       server:
         git:
-          uri: 
+          uri: https://github.com/sparkzy/CASL-User-Config
+          #uri: ${CASL}/Server/CASL-User-Config
+          #uri: ${JAVA_BRAINS}/configrepo #C:/User/Bobby/Documents/Projects/CASL/Server/CASL-User-Config
+  application:
+    name: CASL-User-Cofnig-Server
+server:
+  port: 8888
